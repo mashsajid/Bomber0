@@ -56,4 +56,10 @@ if(con == 'check'):
     confc()
 
 if(options.to > 0):
-    send(options.message,options.to,options.number)
+    if(os.path.exists("config.txt") == 0):
+        confile = open("config.txt","w")
+        confile.close()
+    if(os.stat("config.txt").st_size==0):
+        print ("\033[0;31;47mConfig the bomber first!\033[0m")
+    else:
+        send(options.message,options.to,options.number)
