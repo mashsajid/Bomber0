@@ -17,3 +17,8 @@ python Bomber.py -t [Recipient's Mail] -n [Number of Mails] -m [Message]
 ```
 python Bomber.py -h
 ```
+# Requirements
+
+```
+apt-get -y install build-essential
+```
